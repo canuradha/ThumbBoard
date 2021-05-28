@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyboardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:id="@+id/wordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/keyWord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Test"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/keysHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/row_1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/row_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/Y"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Y"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/U"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/U"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="U"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/I"
+                        app:layout_constraintStart_toEndOf="@id/Y"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/I"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="I"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/O"
+                        app:layout_constraintStart_toEndOf="@id/U"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/O"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="O"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/P"
+                        app:layout_constraintStart_toEndOf="@id/I"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/P"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="P"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/O"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/row_2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/row_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/row_1"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="1dp">
+
+                    <Button
+                        android:id="@+id/H"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="H"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/J"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/J"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="J"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/K"
+                        app:layout_constraintStart_toEndOf="@id/H"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/K"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="K"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/L"
+                        app:layout_constraintStart_toEndOf="@id/J"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/L"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="L"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/question"
+                        app:layout_constraintStart_toEndOf="@id/K"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/question"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="\?"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/L"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/row_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/row_2"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="1dp">
+
+                    <Button
+                        android:id="@+id/N"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="N"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/M"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/M"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="M"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/dot"
+                        app:layout_constraintStart_toEndOf="@id/N"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/dot"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="."
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/comma"
+                        app:layout_constraintStart_toEndOf="@id/M"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/comma"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text=","
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/enter"
+                        app:layout_constraintStart_toEndOf="@id/dot"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/enter"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Ent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/comma"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/keysVerticle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/col_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/col_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/T"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="T"
+                        app:layout_constraintBottom_toTopOf="@id/R"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp"/>
+
+                    <Button
+                        android:id="@+id/R"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="R"
+                        app:layout_constraintBottom_toTopOf="@id/E"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/T"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/E"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="E"
+                        app:layout_constraintBottom_toTopOf="@+id/W"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/R"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/W"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="W"
+                        app:layout_constraintBottom_toTopOf="@id/Q"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/E"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/Q"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Q"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/W"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/col_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/col_3"
+                    app:layout_constraintStart_toEndOf="@id/col_1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/G"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="G"
+                        app:layout_constraintBottom_toTopOf="@id/F"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/F"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="F"
+                        app:layout_constraintBottom_toTopOf="@id/D"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/G"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/D"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="D"
+                        app:layout_constraintBottom_toTopOf="@+id/S"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/F"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/S"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="S"
+                        app:layout_constraintBottom_toTopOf="@id/A"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/D"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/A"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="A"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/S"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/col_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/touchpad"
+                    app:layout_constraintStart_toEndOf="@id/col_2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/B"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="B"
+                        app:layout_constraintBottom_toTopOf="@id/V"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/V"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="V"
+                        app:layout_constraintBottom_toTopOf="@id/C"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/B"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/C"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="C"
+                        app:layout_constraintBottom_toTopOf="@+id/X"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/V"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/X"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="X"
+                        app:layout_constraintBottom_toTopOf="@id/Z"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/C"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/Z"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Z"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/X"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="1dp" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/touchpad"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/col_3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
