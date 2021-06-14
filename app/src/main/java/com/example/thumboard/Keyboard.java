@@ -1,4 +1,4 @@
-`package com.example.thumboard;
+package com.example.thumboard;
 
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
